@@ -5,23 +5,40 @@
 */
 
 function pilih(select) {
-	var dom = document.querySelector(select);
-	return dom;
+	let sel = document.querySelector(select)
+	sel.atribut = function(attr, vals) {
+		let val = vals || 0
+		if(val == "") {
+			return sel.getAttribute(attr)
+		}else {
+			return sel.setAttribute(attr, val)
+		}
+	}
+	sel.klik = function(callback) {
+		sel.addEventListener("click", callback)
+	}
+	sel.klikGanda = function(callback) {
+		sel.addEventListener("dblclick", callback)
+	}
+	sel.tulis = function(evt) {
+		sel.innerHTML = evt
+	}
+	sel.isi = function(vals) {
+		let val = vals || 0
+		if(val == "") {
+			return sel.value
+		}else {
+			return sel.value = val
+		}
+	}
+	sel.pengaya = function(style) {
+		sel.setAttribute("style", style)
+	}
+	return sel;
 }
 
-function klik(select, aksi) {
-	var dom = pilih(select);
-	dom.addEventListener("click", aksi);
-}
-
-function klikGanda(select, aksi) {
-	var dom = pilih(select);
-	dom.addEventListener("dblclick", aksi);
-}
-
-function tulis(select, txt) {
-	var dom = pilih(select);
-	dom.innerHTML = txt;
+function pilihSemua(select) {
+	return document.querySelectorAll(select)
 }
 
 function hilang(select) {
@@ -90,12 +107,6 @@ function submit(sel, callback) {
 	}
 }
 
-// Styling
-function pengaya(select, style) {
-	var dom = pilih(select);
-	dom.setAttribute("style", style);
-}
-
 // Keyboard Event
 function tekan(key, fungsi) {
 	document.addEventListener("keydown", function(e) {
@@ -139,13 +150,13 @@ function munculPopup(sel, opt = null) {
 	muncul(".bg ");
 	muncul(sel);
 	setTimeout(function() {
-		pengaya(sel + " .popup", "top:0px;");
+		pilih(sel + " .popup").pengaya("top: 0px")
 		opt
 	}, 50);
 }
 function hilangPopup(sel) {
 	hilang(".bg");
-	pengaya(sel + " .popup", "top:-550%;");
+	pilih(sel + " .popup").pengaya("top: -550%");
 	setTimeout(function() {
 		hilang(sel);
 	}, 250);

@@ -78,13 +78,13 @@ include 'aksi/ctrl/controller.php';
 
 	loadCtrl()
 	
-	klik("#xNew", function() {
+	pilih("#xNew").klik(() => {
 		hilangPopup("#formNewCtrl")
 	})
-	klik("#xDel", function() {
+	pilih("#xDel").klik(() => {
 		hilangPopup("#delCtrl")
 	})
-	klik("#newCtrl", function() {
+	pilih("#newCtrl").klik(() => {
 		munculPopup("#formNewCtrl")
 	})
 

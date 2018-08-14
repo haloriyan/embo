@@ -82,10 +82,10 @@
 		}
 	}
 
-	klik("#newPage", function() {
+	pilih("#newPage").klik(() => {
 		munculPopup("#createPage")
 	})
-	klik("#xCreate", function() {
+	pilih("#xCreate").klik(() => {
 		hilangPopup("#createPage")
 	})
 	tekan("Escape", function() {
