@@ -15,7 +15,7 @@
 		<h1>Hello Embo!</h1>
 		<nav class="nav">
 			<li><a href='http://embo.riyansatria.tk'>Home</a></li>
-			<li><a href='http://embo.riyansatria.tk/dok'>Documentation</a></li>
+			<li><a href='./docs/intro'>Documentation</a></li>
 			<li><a href='./controller'>Dev</a></li>
 		</nav>
 	</div>
