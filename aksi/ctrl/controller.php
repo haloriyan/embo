@@ -115,10 +115,12 @@ class controller {
 			}
 			$totKey = count($opt);
 			if($totKey == 1) {
-				if($like == "") {
+				if($like == "" or $like == "=") {
 					$query .= " WHERE $key = '$val'";
-				}else {
+				}else if($like == "like") {
 					$query .= " WHERE $key LIKE '%$val%'";
+				}else {
+					$query .= " WHERE $key ".$like." '".$val."'";
 				}
 			}else {
 				$query .= " WHERE ";

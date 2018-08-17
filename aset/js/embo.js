@@ -6,7 +6,7 @@
 
 function pilih(select) {
 	let sel = document.querySelector(select)
-	sel.atribut = function(attr, vals) {
+	sel.atribut = function(attr, vals = null) {
 		let val = vals || 0
 		if(val == "") {
 			return sel.getAttribute(attr)
@@ -34,21 +34,17 @@ function pilih(select) {
 	sel.pengaya = function(style) {
 		sel.setAttribute("style", style)
 	}
+	sel.hilang = function() {
+		sel.style.display = "none";
+	}
+	sel.muncul = function() {
+		sel.style.display = "block";
+	}
 	return sel;
 }
 
 function pilihSemua(select) {
 	return document.querySelectorAll(select)
-}
-
-function hilang(select) {
-	var dom = pilih(select);
-	dom.style.display = "none";
-}
-
-function muncul(select) {
-	var dom = pilih(select);
-	dom.style.display = "block";
 }
 
 function mengarahkan(tujuan) {
