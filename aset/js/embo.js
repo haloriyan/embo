@@ -143,18 +143,18 @@ function scroll(val) {
 }
 
 function munculPopup(sel, opt = null) {
-	muncul(".bg ");
-	muncul(sel);
+	pilih(".bg").muncul()
+	pilih(sel).muncul()
 	setTimeout(function() {
 		pilih(sel + " .popup").pengaya("top: 0px")
 		opt
 	}, 50);
 }
 function hilangPopup(sel) {
-	hilang(".bg");
+	pilih(".bg").hilang()
 	pilih(sel + " .popup").pengaya("top: -550%");
 	setTimeout(function() {
-		hilang(sel);
+		pilih(sel).hilang();
 	}, 250);
 }
 
