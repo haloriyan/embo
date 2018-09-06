@@ -20,7 +20,7 @@ function lihat($param) {
 	}
 }
 
-class controller {
+class CTRL {
 	public function __construct() {
 		$this->koneksi();
 	}
@@ -175,7 +175,7 @@ class controller {
 		$y = "<?php
 include 'controller.php';
 
-class ".$name." extends controller {
+class ".$name." extends CTRL {
 	public function test() {
 		return 'Hello embo!';
 	}
@@ -242,4 +242,4 @@ $".$name." = new ".$name."();
 	}
 }
 
-$ctrl = new controller();
+$ctrl = new CTRL();
