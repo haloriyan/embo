@@ -156,7 +156,13 @@ class CTRL {
 	
 	public function eksekusi() {
 		global $query;
-		return mysqli_query($this->konek, $query);
+		global $ch;
+		if(!$query) {
+			$res = curl_exec($ch);
+			return curl_close($ch);
+		}else {
+			return mysqli_query($this->konek, $query);
+		}
 		// return $query;
 	}
 	public function ambil($q) {
@@ -235,10 +241,42 @@ $".$name." = new ".$name."();
 
 	// gapenting
 	public function pos($param) {
-		return @$_POST[$param];
+		global $ch;
+		if(!$ch) {
+			return @$_POST[$param];
+		}else {
+			global $ch;
+			curl_setopt($ch, CURLOPT_POST, 1);
+			curl_setopt($ch, CURLOPT_POSTFIELDS, $param);
+			return $this;
+		}
 	}
 	public function dapat($param) {
 		return $_GET[$param];
+	}
+
+	// CURL
+	public function curl() {
+		global $ch;
+		$ch = curl_init();
+		return $this;
+	}
+	public function setUrl($url) {
+		global $ch;
+		curl_setopt($ch, CURLOPT_URL, $url);
+		return $this;
+	}
+	public function postFields($param) {
+		global $ch;
+		curl_setopt($ch, CURLOPT_POST, 1);
+		curl_setopt($ch, CURLOPT_POSTFIELDS, $param);
+		return $this;
+	}
+	public function exec() {
+		global $ch;
+		$res = curl_exec($ch);
+		curl_close($ch);
+		return $res;
 	}
 }
 
