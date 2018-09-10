@@ -100,6 +100,7 @@ class CTRL {
 			foreach ($opt as $key => $value) {
 				$query .= $key . " = '".$value."', ";
 			}
+			$query .= "dummy = dummy";
 		}
 		return $this;
 	}
@@ -159,7 +160,8 @@ class CTRL {
 		global $ch;
 		if(!$query) {
 			$res = curl_exec($ch);
-			return curl_close($ch);
+			curl_close($ch);
+			return $res;
 		}else {
 			return mysqli_query($this->konek, $query);
 		}

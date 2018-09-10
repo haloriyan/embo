@@ -29,7 +29,7 @@ foreach ($db['tabel'] as $key => $value) {
 	$createDb = mysqli_query($conn, $queryDatabase);
 	$conn = mysqli_connect($dbHost, $dbUsername, $dbPassword, $namaDb);
 	$createTable = mysqli_query($conn, $queryTable);
-	$delDummy = mysqli_query($conn, "ALTER TABLE ".$namaTabel." DROP dummy");
+	// $delDummy = mysqli_query($conn, "ALTER TABLE ".$namaTabel." DROP dummy");
 }
 
 foreach ($db['atribut'] as $key => $value) {
