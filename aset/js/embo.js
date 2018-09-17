@@ -4,7 +4,7 @@
 	* Licensed open-source under General Public License 3.0
 */
 
-function pilih(select) {
+function $(select) {
 	let sel = document.querySelector(select)
 	sel.atribut = function(attr, vals = null) {
 		let val = vals || 0
