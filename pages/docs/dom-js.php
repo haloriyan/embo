@@ -48,7 +48,7 @@
         <div class="code">
             &lt;div id='test'&gt;Halo dunia!&lt;/div&gt;<br />
             &lt;script&gt;<br />
-            pilih("#test")<br />
+            $("#test")<br />
             &lt;/script&gt;
         </div>
         <br />
@@ -56,35 +56,35 @@
         <div class="code">
             &lt;div id='test'&gt;Halo dunia!&lt;/div&gt;<br />
             &lt;script&gt;<br />
-            pilih("#test").hilang()<br />
+            $("#test").hilang()<br />
             &lt;/script&gt;
         </div>
         <h3>Memunculkan DOM</h3>
         <div class="code">
             &lt;div id='test'&gt;Halo dunia!&lt;/div&gt;<br />
             &lt;script&gt;<br />
-            pilih("#test").muncul()<br />
+            $("#test").muncul()<br />
             &lt;/script&gt;
         </div>
         <h3>Menambah Style pada DOM</h3>
         <div class="code">
             &lt;div id='test'&gt;Halo dunia!&lt;/div&gt;<br />
             &lt;script&gt;<br />
-            pilih("#test").pengaya("background: red")<br />
+            $("#test").pengaya("background: red")<br />
             &lt;/script&gt;
         </div>
         <h3>Mengubah Konten DOM</h3>
         <div class="code">
             &lt;div id='test'&gt;Halo dunia!&lt;/div&gt;<br />
             &lt;script&gt;<br />
-            pilih("#test").tulis("Hello world")<br />
+            $("#test").tulis("Hello world")<br />
             &lt;/script&gt;
         </div>
         <h3>Mengubah Value Input</h3>
         <div class="code">
             &lt;input type='text' id='test' value='halo'&gt;<br />
             &lt;script&gt;<br />
-            pilih("#test").isi("hello")<br />
+            $("#test").isi("hello")<br />
             &lt;/script&gt;
         </div>
         <br />
