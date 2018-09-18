@@ -67,14 +67,14 @@
 <script src="aset/js/embo.js"></script>
 <script>
 	function load() {
-		$.get("aksi/page/load.php", function(res) {
-			$("#listPage").html(res)
+		ambil("aksi/page/load.php", function(res) {
+			$("#listPage").tulis(res)
 		})
 	}
 	load()
 
 	function check() {
-		let checkBox = pilih("#generate")
+		let checkBox = $("#generate")
 		if(checkBox.checked) {
 			checkBox.setAttribute("data", "1")
 		}else {
@@ -82,10 +82,10 @@
 		}
 	}
 
-	pilih("#newPage").klik(() => {
+	$("#newPage").klik(() => {
 		munculPopup("#createPage")
 	})
-	pilih("#xCreate").klik(() => {
+	$("#xCreate").klik(() => {
 		hilangPopup("#createPage")
 	})
 	tekan("Escape", function() {
@@ -93,8 +93,8 @@
 	})
 
 	submit("#formCreate", function() {
-		let name = pilih("#pageName")
-		let generate = pilih("#generate").getAttribute("data")
+		let name = $("#pageName")
+		let generate = $("#generate").getAttribute("data")
 		let crt = "name="+name.value+"&generate="+generate
 		if(name == "") {
 			return false
@@ -107,7 +107,7 @@
 		return false
 	})
 	submit("#formDelPage", function() {
-		let name = pilih("#pageWillDel").value
+		let name = $("#pageWillDel").value
 		let del = "name="+name
 		pos("aksi/page/delete.php", del, function() {
 			hilangPopup("#delPage")

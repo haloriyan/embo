@@ -98,7 +98,7 @@ function ambilJSON(url, sukses) {
 }
 
 function submit(sel, callback) {
-	pilih(sel).onsubmit = function() {
+	$(sel).onsubmit = function() {
 		return callback()
 	}
 }
@@ -130,7 +130,7 @@ function tekan(key, fungsi) {
 
 // Scrolling
 function scrollKe(dom) {
-	pilih(dom).scrollIntoView({
+	$(dom).scrollIntoView({
 		behavior: 'smooth'
 	});
 }
@@ -143,18 +143,18 @@ function scroll(val) {
 }
 
 function munculPopup(sel, opt = null) {
-	pilih(".bg").muncul()
-	pilih(sel).muncul()
+	$(".bg").muncul()
+	$(sel).muncul()
 	setTimeout(function() {
-		pilih(sel + " .popup").pengaya("top: 0px")
+		$(sel + " .popup").pengaya("top: 0px")
 		opt
 	}, 50);
 }
 function hilangPopup(sel) {
-	pilih(".bg").hilang()
-	pilih(sel + " .popup").pengaya("top: -550%");
+	$(".bg").hilang()
+	$(sel + " .popup").pengaya("top: -550%");
 	setTimeout(function() {
-		pilih(sel).hilang();
+		$(sel).hilang();
 	}, 250);
 }
 

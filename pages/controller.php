@@ -71,20 +71,20 @@ include 'aksi/ctrl/controller.php';
 <script src="aset/js/embo.js"></script>
 <script>
 	function loadCtrl() {
-		$.get("aksi/controller/load.php", function(res) {
-			$("#listCtrl").html(res)
+		ambil("aksi/controller/load.php", function(res) {
+			$("#listCtrl").tulis(res)
 		})
 	}
 
 	loadCtrl()
 	
-	pilih("#xNew").klik(() => {
+	$("#xNew").klik(() => {
 		hilangPopup("#formNewCtrl")
 	})
-	pilih("#xDel").klik(() => {
+	$("#xDel").klik(() => {
 		hilangPopup("#delCtrl")
 	})
-	pilih("#newCtrl").klik(() => {
+	$("#newCtrl").klik(() => {
 		munculPopup("#formNewCtrl")
 	})
 
@@ -94,7 +94,7 @@ include 'aksi/ctrl/controller.php';
 	})
 
 	submit("#formCreateCtrl", function() {
-		let name = pilih("#ctrlName")
+		let name = $("#ctrlName")
 		let crt = "name="+name.value
 		if(name == "") {
 			return false
@@ -107,7 +107,7 @@ include 'aksi/ctrl/controller.php';
 		return false
 	})
 	submit("#formDelCtrl", function() {
-		let name = pilih("#ctrlWillDel").value
+		let name = $("#ctrlWillDel").value
 		let del = "name="+name
 		pos("aksi/controller/delete.php", del, function() {
 			hilangPopup("#delCtrl")
