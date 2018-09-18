@@ -53,7 +53,7 @@ input[readonly],textarea[readonly],select[readonly] { background: #ecf0f1; }
 
 .merah { background-color: #e74c3c;color: #fff; }
 .merah-2 { background-color: #cb0023;color: #fff; }
-.kuning { background-color: #fcd840;color: #444; }
+.kuning { background-color: #ffc400;color: #555; }
 .hijau { background-color: #2ecc71;color: #fff; }
 .hijau-2 { background-color: #009e87;color: #fff; }
 .biru { background-color: #2196f3;color: #fff; }
