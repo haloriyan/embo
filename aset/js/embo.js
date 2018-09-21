@@ -5,6 +5,7 @@
 */
 
 function $(select) {
+	// Selecting a dom
 	let sel = document.querySelector(select)
 	sel.atribut = function(attr, vals = null) {
 		let val = vals || 0
@@ -15,15 +16,19 @@ function $(select) {
 		}
 	}
 	sel.klik = function(callback) {
+		// Click Event
 		sel.addEventListener("click", callback)
 	}
 	sel.klikGanda = function(callback) {
+		// Double-click event
 		sel.addEventListener("dblclick", callback)
 	}
 	sel.tulis = function(evt) {
+		// replacing HTML
 		sel.innerHTML = evt
 	}
 	sel.isi = function(vals) {
+		// setting value of input
 		let val = vals || 0
 		if(val == "") {
 			return sel.value
@@ -32,13 +37,21 @@ function $(select) {
 		}
 	}
 	sel.pengaya = function(style) {
+		// adding extra-style
 		sel.setAttribute("style", style)
 	}
 	sel.hilang = function() {
+		// make the dom disappear
 		sel.style.display = "none";
 	}
 	sel.muncul = function() {
+		// make the dom appear
 		sel.style.display = "block";
+	}
+	sel.kirim = function(callback) {
+		sel.onsubmit = function() {
+			return callback
+		}
 	}
 	return sel;
 }
@@ -48,11 +61,13 @@ function pilihSemua(select) {
 }
 
 function mengarahkan(tujuan) {
+	// redirecting to any page
 	document.location = tujuan;
 }
 
 // Ajax Handler
 function pos(url, data, efek) {
+	// Post an ajax request
 	var xhr = new XMLHttpRequest();
 	xhr.open("POST", url, true);
 
@@ -68,6 +83,7 @@ function pos(url, data, efek) {
 }
 
 function ambil(url, sukses) {
+	// Request ajax get
 	var xhr = new XMLHttpRequest();
 	xhr.open('GET', url, true);
 	xhr.onreadystatechange = function() {
@@ -82,6 +98,7 @@ function ambil(url, sukses) {
 }
 
 function ambilJSON(url, sukses) {
+	// Request ajax get if the response are in json format
 	var xhr = new XMLHttpRequest()
 	xhr.open('GET', url, true)
 
@@ -98,6 +115,7 @@ function ambilJSON(url, sukses) {
 }
 
 function submit(sel, callback) {
+	// submi
 	$(sel).onsubmit = function() {
 		return callback()
 	}
@@ -130,12 +148,14 @@ function tekan(key, fungsi) {
 
 // Scrolling
 function scrollKe(dom) {
+	// Scroll to dom what you want to look
 	$(dom).scrollIntoView({
 		behavior: 'smooth'
 	});
 }
 
 function scroll(val) {
+	// scrolling from top of page
 	window.scroll({
 		top: val,
 		behavior: 'smooth'

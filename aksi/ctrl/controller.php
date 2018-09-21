@@ -20,7 +20,7 @@ function lihat($param) {
 	}
 }
 
-class CTRL {
+class EMBO {
 	public function __construct() {
 		$this->koneksi();
 	}
@@ -183,7 +183,7 @@ class CTRL {
 		$y = "<?php
 include 'controller.php';
 
-class ".$name." extends CTRL {
+class ".$name." extends EMBO {
 	public function test() {
 		return 'Hello embo!';
 	}
@@ -196,7 +196,7 @@ $".$name." = new ".$name."();
 		fclose($file);
 	}
 	public function remove($name) {
-		$del = unlink("../ctrl/".$name.".php");
+		$del = unlink("../EMBO/".$name.".php");
 		return $del;
 	}
 
@@ -282,4 +282,4 @@ $".$name." = new ".$name."();
 	}
 }
 
-$ctrl = new CTRL();
+$embo = new EMBO();
