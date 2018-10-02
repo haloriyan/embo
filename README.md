@@ -29,4 +29,4 @@ You can create a simple page by accessing `http://yoursite.com/page` and fill th
 Before deploying project, migrate the database first. You can set up the table via `/database/migration.json`, for guidances, see the [DB Generator Docs](https://github.com/haloriyan/db-generator). After setting up, run `http://yoursite.com/migrate` to migrate all of your tables. And dont forget to change the database configuration which located in `/database/config.php`.
 
 ## License and Usage
-EMBO is free to use. You can use embo on any project, even commercial project. But please dont delete the copyright which located on comments scripts :D
+EMBO is free to use. You can use embo in any project, even commercial project. But please dont delete the copyright which located on comments scripts :D
