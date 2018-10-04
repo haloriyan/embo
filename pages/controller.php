@@ -75,6 +75,10 @@ include 'aksi/ctrl/controller.php';
 			$("#listCtrl").tulis(res)
 		})
 	}
+	function del(val) {
+		munculPopup('#delCtrl')
+		$('#ctrlWillDel').isi(val)
+	}
 
 	loadCtrl()
 	
@@ -102,12 +106,13 @@ include 'aksi/ctrl/controller.php';
 		pos("aksi/controller/create.php", crt, function() {
 			name.value = ""
 			hilangPopup("#formNewCtrl")
+			console.log('created')
 			loadCtrl()
 		})
 		return false
 	})
 	submit("#formDelCtrl", function() {
-		let name = $("#ctrlWillDel").value
+		let name = $("#ctrlWillDel").isi()
 		let del = "name="+name
 		pos("aksi/controller/delete.php", del, function() {
 			hilangPopup("#delCtrl")

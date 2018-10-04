@@ -7,6 +7,10 @@
 function $(select) {
 	// Selecting a dom
 	let sel = document.querySelector(select)
+	sel.klik = function(callback) {
+		// Click Event
+		sel.addEventListener("click", callback)
+	}
 	sel.atribut = function(attr, vals = null) {
 		let val = vals || 0
 		if(val == "") {
@@ -14,10 +18,6 @@ function $(select) {
 		}else {
 			return sel.setAttribute(attr, val)
 		}
-	}
-	sel.klik = function(callback) {
-		// Click Event
-		sel.addEventListener("click", callback)
 	}
 	sel.klikGanda = function(callback) {
 		// Double-click event
@@ -51,6 +51,19 @@ function $(select) {
 	sel.kirim = function(callback) {
 		sel.onsubmit = function() {
 			return callback
+		}
+	}
+	sel.di = function(aksi, callback) {
+		if(aksi == 'kirim') {
+			sel.onsubmit = function() {
+				return callback
+			}
+		}else if(aksi == 'klik') {
+			sel.addEventListener('click', callback)
+		}else if(aksi == 'ketik') {
+			sel.addEventListener('input', callback)
+		}else if(aksi == 'ganti') {
+			sel.addEventListener('change', callback)
 		}
 	}
 	return sel;

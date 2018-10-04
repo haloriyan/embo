@@ -73,6 +73,11 @@
 	}
 	load()
 
+	function del(val) {
+		$('#pageWillDel').isi(val)
+		munculPopup('#delPage')
+	}
+
 	function check() {
 		let checkBox = $("#generate")
 		if(checkBox.checked) {

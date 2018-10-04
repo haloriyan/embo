@@ -1,6 +1,6 @@
 <?php
 
-// error_reporting(1);
+error_reporting(1);
 $role = $_GET['role'];
 $bag = $_GET['bag'];
 

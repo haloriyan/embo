@@ -196,7 +196,7 @@ $".$name." = new ".$name."();
 		fclose($file);
 	}
 	public function remove($name) {
-		$del = unlink("../EMBO/".$name.".php");
+		$del = unlink("../ctrl/".$name.".php");
 		return $del;
 	}
 
