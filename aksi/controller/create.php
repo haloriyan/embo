@@ -3,4 +3,4 @@ include '../ctrl/controller.php';
 
 $name = $_POST['name'];
 
-$embo->new($name);
+$embo->newCtrl($name);

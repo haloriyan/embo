@@ -7,6 +7,11 @@
 function $(select) {
 	// Selecting a dom
 	let sel = document.querySelector(select)
+	/*
+	if(document.querySelectorAll(select).length > 1) {
+		let sel = document.querySelectorAll(select)
+	}
+	*/
 	sel.klik = function(callback) {
 		// Click Event
 		sel.addEventListener("click", callback)
@@ -67,10 +72,6 @@ function $(select) {
 		}
 	}
 	return sel;
-}
-
-function pilihSemua(select) {
-	return document.querySelectorAll(select)
 }
 
 function mengarahkan(tujuan) {

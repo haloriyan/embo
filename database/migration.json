@@ -2,7 +2,8 @@
 	"tabel": {
 		"users": [
 			"iduser int(11)",
-			"username varchar(50)",
+			"nama varchar(50)",
+			"email varchar(50)",
 			"password varchar(50)",
 			"registered int(11)"
 		]
@@ -12,7 +13,7 @@
 			"user.iduser"
 		],
 		"unique key": [
-			"user.username"
+			"user.email"
 		]	
 	}
 }

@@ -149,9 +149,14 @@ class EMBO {
 		$query .= " ORDER BY ".$kolom." ".$urut;
 		return $this;
 	}
-	public function batas($pos, $bts) {
+	public function batas($pos, $bts = NULL) {
 		global $query;
-		$query .= "LIMIT ".$pos.",".$bts;
+		if($bts == "") {
+			$bts = $pos;
+			$query .= " LIMIT ".$bts;
+		}else {
+			$query .= " LIMIT ".$pos.",".$bts;
+		}
 		return $this;
 	}
 	
@@ -168,7 +173,7 @@ class EMBO {
 		// return $query;
 	}
 	public function ambil($q) {
-		return mysqli_fetch_array($q);
+		return mysqli_fetch_assoc($q);
 	}
 	public function hitung($q) {
 		return mysqli_num_rows($q);
@@ -178,7 +183,7 @@ class EMBO {
 	}
 
 	// PLEASE DONT EDIT THIS
-	public function new($name) {
+	public function newCtrl($name) {
 		$file = fopen("../ctrl/".$name.".php", "w");
 		$y = "<?php
 include 'controller.php';
