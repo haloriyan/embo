@@ -1,5 +1,5 @@
-# EMBO - Enterprise Module for Building Open-source
-Embo is a simple way to building enterprise opensource project. Integrated PHP-JS will help you for developping a project. Have you used Laravel or CodeIgniter? You'll can use this.
+# EMBO - Easy Module for Building Open-source
+Embo is a simple way to building awesome opensource project. Integrated PHP-JS will help you for developping a project. Have you used Laravel or CodeIgniter? You'll can use this.
 
 ## Installation
 ```

@@ -214,7 +214,7 @@ $".$name." = new ".$name."();
 	<meta name='viewport' content='width=device-width, initial-scale = 1'>
 	<title>".$name."</title>
 	<link href='aset/fw/build/fw.css' rel='stylesheet'>
-	<link href='aset/fw/build/font-awesome.min.css' rel='stylesheet'>
+	<link href='aset/fw/build/fontawesome-all.min.css' rel='stylesheet'>
 	<link href='aset/css/style.".$name.".css' rel='stylesheet'>
 </head>
 <body>

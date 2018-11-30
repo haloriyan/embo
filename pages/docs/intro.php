@@ -42,7 +42,7 @@
     <div class="wrap">
         <h2>Berkenalan dengan EMBO</h2>
         <p>
-            EMBO ( singkatan dari <i>Enterprise Module for Building Opensource</i> ) adalah satu-satunya cara termudah untuk membuat proyek open-source yang kompleks. Terintegrasi dengan library Javascript dan PHP Framework yang akan membantu kamu mengembangkan sebuah proyek aplikasi. Sudah pernah membuat aplikasi menggunakan Laravel atau CodeIgniter? Kalau sudah berarti kamu bisa menggunakan EMBO.
+            EMBO ( singkatan dari <i>Easy Module for Building Opensource</i> ) adalah satu-satunya cara termudah untuk membuat proyek open-source yang kompleks. Terintegrasi dengan library Javascript dan PHP Framework yang akan membantu kamu mengembangkan sebuah proyek aplikasi. Sudah pernah membuat aplikasi menggunakan Laravel atau CodeIgniter? Kalau sudah berarti kamu bisa menggunakan EMBO.
         </p>
         <a href='./install'><button class='tbl merah-2'>Lanjut ke : Instalasi EMBO</button></a>
     </div>
