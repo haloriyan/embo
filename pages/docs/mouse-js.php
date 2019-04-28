@@ -45,7 +45,7 @@
         <div class="code">
             &lt;button id='test'&gt;Klik saya!&lt;/button&gt;<br />
             &lt;script&gt;<br />
-            pilih("#test").klik(() => {<br />
+            $("#test").klik(() => {<br />
             &nbsp; &nbsp; &nbsp; alert('halo dunia!')<br />
             })<br />
             &lt;/script&gt;
@@ -58,7 +58,7 @@
         <div class="code">
             &lt;button id='test'&gt;Klik saya!&lt;/button&gt;<br />
             &lt;script&gt;<br />
-            pilih("#test").klikGanda(() => {<br />
+            $("#test").klikGanda(() => {<br />
             &nbsp; &nbsp; &nbsp; alert('halo dunia!')<br />
             })<br />
             &lt;/script&gt;
@@ -76,10 +76,10 @@
 <script src='../aset/js/script.docs.js'></script>
 <script>
     toggleJs(0)
-    pilih("#testClick").klik(() => {
+    $("#testClick").klik(() => {
         alert('halo dunia!')
     })
-    pilih("#testDblClick").klikGanda(() => {
+    $("#testDblClick").klikGanda(() => {
         alert('halo dunia!')
     })
 </script>

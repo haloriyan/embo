@@ -46,7 +46,7 @@
         <h3>Menambah Data</h3>
         <p>
             <div class='code'>
-                $insert = $this->tabel("users")<br />
+                $insert = EMBO::tabel("users")<br />
                 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;->tambah([<br />
                 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;"iduser" => rand(1, 999),<br />
                 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;"username" => $username,<br />
@@ -60,37 +60,37 @@
         <p>
             <div class='code'>
                 // Semua data<br />
-                $read = $this->tabel("users")->pilih()->eksekusi();<br /><br />
+                $read = EMBO::tabel("users")->pilih()->eksekusi();<br /><br />
                 // Kolom tertentu<br />
-                $read = $this->tabel("users")->pilih("nama")->eksekusi();<br /><br />
+                $read = EMBO::tabel("users")->pilih("nama")->eksekusi();<br /><br />
                 // WHERE =<br />
-                $read = $this->tabel("users")<br />
+                $read = EMBO::tabel("users")<br />
                 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;->pilih()<br />
                 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;->dimana([<br />
                 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "iduser" => "123"<br />
                 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;])<br />
                 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;->eksekusi();<br /><br />
                 // WHERE LIKE<br />
-                $read = $this->tabel("users")<br />
+                $read = EMBO::tabel("users")<br />
                 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;->pilih()<br />
                 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;->dimana([<br />
                 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "nama" => "riyan"<br />
                 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;], "like")<br />
                 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;->eksekusi();<br /><br />
                 // WHERE !=<br />
-                $read = $this->tabel("users")<br />
+                $read = EMBO::tabel("users")<br />
                 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;->pilih()<br />
                 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;->dimana([<br />
                 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "iduser" => "123"<br />
                 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;], "!=")<br />
                 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;->eksekusi();<br /><br />
                 // LIMIT<br />
-                $read = $this->tabel("users")<br />
+                $read = EMBO::tabel("users")<br />
                 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;->pilih()<br />
                 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;->batas(10)<br />
                 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;->eksekusi();<br /><br />
                 // ORDER BY<br />
-                $read = $this->tabel("users")<br />
+                $read = EMBO::tabel("users")<br />
                 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;->pilih()<br />
                 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;->urutkan("nama", "ASC") // Kalau pengen DESC ya diganti aja<br />
                 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;->eksekusi();<br /><br />
@@ -99,7 +99,7 @@
         <h3>Mengubah Data</h3>
         <p>
             <div class='code'>
-                $update = $this->tabel("users")<br />
+                $update = EMBO::tabel("users")<br />
                 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;->ubah([<br />
                 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;"nama" => "Riyan Satria"<br />
                 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;])<br />
@@ -112,7 +112,7 @@
         <h3>Menghapus Data</h3>
         <p>
             <div class='code'>
-                $delete = $this->tabel("users")<br />
+                $delete = EMBO::tabel("users")<br />
                 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;->hapus()<br />
                 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;->dimana([<br />
                 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;"iduser" => "123"<br />
@@ -124,24 +124,24 @@
         <p>
             Masih ada banyak fungsi SQL Query yang belum didukung oleh EMBO, seperti inner join, left join, sum(), count(), dsb. Tapi kamu tetap bisa menjalankannya dengan membuat query secara native, jadi kamu harus bikin sendiri
             <div class='code'>
-                $query = $this->query("SELECT * FROM users");
+                $query = EMBO::query("SELECT * FROM users");
             </div>
         </p>
         <h2>Mengambil Data dari Query</h2>
         <p>
             Setelah kita berhasil membuat query memakai builder, saatnya mengambilnya (mysqli_fetch_array()) seperti ini
             <div class='code'>
-                $query  = $this->query("SELECT * FROM users WHERE iduser = '1'");<br />
-                $result = $this->ambil($q);<br />
+                $query  = EMBO::query("SELECT * FROM users WHERE iduser = '1'");<br />
+                $result = EMBO::ambil($q);<br />
                 echo $result['nama'];
             </div>
         </p>
         <h2>Menghitung Data dari Query</h2>
         <p>
-            Biasanya kamu menggunakan mysqli_num_rows() untuk menghitung data, di EMBO kamu tak perlu mengetikkannya seperti itu, tinggal pakai <span class='code mini'>$this->hitung()</span> saja.
+            Biasanya kamu menggunakan mysqli_num_rows() untuk menghitung data, di EMBO kamu tak perlu mengetikkannya seperti itu, tinggal pakai <span class='code mini'>EMBO::hitung()</span> saja.
             <div class='code'>
-                $query = $this->query("SELECT * FROM users");<br />
-                $total = $this->hitung($query);
+                $query = EMBO::query("SELECT * FROM users");<br />
+                $total = EMBO::hitung($query);
             </div>
         </p>
         <p>

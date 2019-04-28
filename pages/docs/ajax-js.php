@@ -45,7 +45,7 @@
         <div class="code">
             &lt;script&gt;<br />
             ambil("urlTarget", (res) => {<br />
-            &nbsp; &nbsp; &nbsp; pilih("#res").tulis(res)<br />
+            &nbsp; &nbsp; &nbsp; $("#res").tulis(res)<br />
             })<br />
             &lt;/script&gt;
         </div>
@@ -53,15 +53,15 @@
         <div class="code">
             &lt;script&gt;<br />
             ambilJSON("urlTarget", (res) => {<br />
-            &nbsp; &nbsp; &nbsp; pilih("#res").tulis(res)<br />
+            &nbsp; &nbsp; &nbsp; $("#res").tulis(res)<br />
             })<br />
             &lt;/script&gt;
         </div>
         <h3>POST</h3>
         <div class="code">
             &lt;script&gt;<br />
-            pos("urlTarget", params, () => {<br />
-            &nbsp; &nbsp; &nbsp; alert('parameter terkirim!')<br />
+            pos("urlTarget", params, (res) => {<br />
+            &nbsp; &nbsp; &nbsp; alert(res)<br />
             })<br />
             &lt;/script&gt;
         </div>

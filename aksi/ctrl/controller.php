@@ -199,6 +199,7 @@ $".$name." = new ".$name."();
 ?>";
 		fwrite($file, $y);
 		fclose($file);
+		chmod("../ctrl/".$name.".php", "w", 0755);
 	}
 	public function remove($name) {
 		$del = unlink("../ctrl/".$name.".php");

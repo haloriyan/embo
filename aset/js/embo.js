@@ -88,7 +88,7 @@ function pos(url, data, efek) {
 	xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 	xhr.onreadystatechange = function() {
 		if(xhr.readyState == 4 && xhr.status == 200) {
-			efek();
+			efek(xhr.responseText);
 		}else {
 			// console.log("gagal mengirim data");
 		}
@@ -180,7 +180,7 @@ function munculPopup(sel, opt = null) {
 	$(".bg").muncul()
 	$(sel).muncul()
 	setTimeout(function() {
-		$(sel + " .popup").pengaya("top: 0px")
+		$(sel + " .popup").pengaya("top: 170px")
 		opt
 	}, 50);
 }

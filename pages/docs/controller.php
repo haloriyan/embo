@@ -49,7 +49,7 @@
             <div class='code'>
                 &lt;?php<br />
                 include 'controller.php';<br /><br />
-                class namaController extends controller {<br />
+                class namaController extends EMBO {<br />
                 &nbsp; &nbsp; &nbsp; public function test() {<br />
                 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return 'Hello Embo';<br />
                 &nbsp; &nbsp; &nbsp; }<br />
